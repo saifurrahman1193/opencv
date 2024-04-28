@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+# RUN pip install --no-cache-dir -r requirements.txt
 
 # Install OpenCV dependencies
 RUN apt-get update && apt-get install -y \
@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
 EXPOSE 8080
 
 # Define environment variable
-ENV NAME World
+# ENV NAME World
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
