@@ -5,16 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: 'python app.py'
+    # command: 'python app.py'
     restart: unless-stopped
     volumes:
       - .:/app
-    # environment:
-    #   - NAME=World
     ports:
       - "8080:8080"
-
-
-
-
-
