@@ -1,5 +1,6 @@
 # api.py
 from fastapi import APIRouter
+from controllers.modules.test.test_controller import list_items, get_item
 
 # Create an instance of APIRouter
 router = APIRouter()
@@ -8,18 +9,12 @@ router = APIRouter()
 async def root():
     return {"message": "hello World"}
 
-@router.post("/")
-async def post():
-    return {"message": "hello World"}
 
-@router.put("/")
-async def put():
-    return {"message": "hello World"}
 
 @router.get("/items")
 async def list_items():
-    return {"message": "hello World"}
+    return await list_items
 
 @router.get("/items/{item_id}")
 async def get_item(item_id: int):
-    return {"item_id": item_id}
+    return await get_item(item_id)
