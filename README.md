@@ -40,4 +40,7 @@ npm run watch
 ```
 
 #### Browser: 
-- browser: http://localhost:85
+- browser: 
+    - http://localhost:85
+    - http://localhost:85/docs 
+- 
