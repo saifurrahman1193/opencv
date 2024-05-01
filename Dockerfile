@@ -1,12 +1,11 @@
 # Use an official Python runtime as a parent image
-FROM python
+FROM python:3.8-slim
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY . /app
-
+# Copy only the requirements file initially
+COPY . .
 
 # Install OpenCV dependencies
 RUN apt-get update && apt-get install -y \
@@ -16,9 +15,12 @@ RUN apt-get update && apt-get install -y \
     libxrender-dev \
     && rm -rf /var/lib/apt/lists/*
 
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+
 # Expose port 8080 to the outside world
 EXPOSE 8080
 
-
-# Run app.py when the container launches
-CMD ["python", "app.py"]
+# Run the application using uvicorn server
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]

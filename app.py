@@ -1,2 +1,7 @@
-import os
-print('Hello world', os.getcwd())
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+async def root():
+    return {"Hello": "World"}
