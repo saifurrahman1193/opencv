@@ -1,3 +1,8 @@
+## Workflow
+    1. PIL (Pillow) => open an image
+    2. OpenCV : Change an image
+    3. Tesserect (PyTesserect) : OCR an image
+
 ### Docker
 #### Docker: 
 
@@ -43,4 +48,8 @@ npm run watch
 - browser: 
     - http://localhost:85
     - http://localhost:85/docs 
-- 
+- Follow Codebase:
+    - https://github.dev/tiangolo/full-stack-fastapi-template/tree/master/backend/
+- Follow Tutorials:
+    - https://www.youtube.com/watch?v=tQGgGY8mTP0&list=PL2VXyKi-KpYuTAZz__9KVl1jQz74bDG7i
+    
