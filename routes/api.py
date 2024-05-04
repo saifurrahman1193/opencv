@@ -3,6 +3,7 @@
 from fastapi import APIRouter
 from routes.api_routes import test_routes
 
+
 # Create an instance of APIRouter
 router = APIRouter()
 
