@@ -1,17 +1,10 @@
-# api.py
-from fastapi import APIRouter
-from controllers.modules.test.testcontroller import test as test_tc
+# routes/api.py
 
+from fastapi import APIRouter
+from routes.api_routes import test_routes
 
 # Create an instance of APIRouter
 router = APIRouter()
 
-@router.get("/")
-async def root():
-    return {"message": "hello World"}
-
-
-
-@router.get("/test")
-async def list_items():
-    return await test_tc()
+# Include routes from other files
+router.include_router(test_routes.router, prefix="/test", tags=["test"])
