@@ -1,7 +1,7 @@
 # routes/test_routes.py
 
 from fastapi import APIRouter
-from controllers.modules.test.test_controller import test
+from controllers.modules.test.test_controller import test_f
 
 # Create an instance of APIRouter
 router = APIRouter()
@@ -12,4 +12,4 @@ async def root():
 
 @router.get("/test")
 async def test():
-    return await test()
+    return await test_f()
