@@ -4,12 +4,12 @@ from fastapi import Request
 
 class ApiResponser:
     @staticmethod
-    def set_response(data, status_code, status, details, request=None):
+    def set_response(data, status_code, status, message, request=None):
         res_data = {
             'status': status,
             'code': status_code,
             'data': data,
-            'message': details
+            'message': message
         }
 
         # logging.warning('================================================================================')

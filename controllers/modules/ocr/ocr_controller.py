@@ -5,5 +5,5 @@ async def ocr_f(request: Request):
     return ApiResponser.set_response("hello world",
                                      status_code=200,
                                      status="Success",
-                                     details="Item created successfully",
+                                     message="Item created successfully",
                                      request=request)
