@@ -52,4 +52,8 @@ npm run watch
     - https://github.dev/tiangolo/full-stack-fastapi-template/tree/master/backend/
 - Follow Tutorials:
     - https://www.youtube.com/watch?v=tQGgGY8mTP0&list=PL2VXyKi-KpYuTAZz__9KVl1jQz74bDG7i
+- Pillow
+    - https://pillow.readthedocs.io/en/stable/
+- Tesserect
+    - https://tesseract-ocr.github.io/tessdoc/Installation.html    
     
