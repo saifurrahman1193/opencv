@@ -1,6 +1,5 @@
 from fastapi import FastAPI, Request
 from helpers.api_responser import ApiResponser
-import cv2
 from PIL import Image
 
 async def ocr_f(request: Request):
