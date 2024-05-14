@@ -9,6 +9,10 @@
 #### CMD
 ```
 docker exec -it opencv-container sh
+
+pip install pillow
+pip install opencv-python
+pip install pytesseract
 ```
 
 #### Access container to container
